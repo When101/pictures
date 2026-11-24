@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Не вір своїм очам — Галерея оптичних ілюзій</title>
+    <style>
+        /* Базові налаштування */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Шапка з градієнтом (рожевий -> синій) */
+        .header {
+            background: linear-gradient(90deg, #ff00cc 0%, #3333ff 100%);
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+
+        .nav a:hover {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+
+        /* Секція "Про проєкт" */
+        .about-section {
+            text-align: center;
+            padding: 30px 20px 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .about-section p {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        /* Секція "Галерея ілюзій" */
+        .gallery-section {
+            text-align: center;
+            padding: 20px 30px 40px;
+            max-width: 1550px;
+            margin: 0 auto;
+        }
+
+        .gallery-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        /* Сітка галереї */
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .gallery-item {
+            width: 170px;
+            height: 320px;
+            border: 2px solid #ffffff;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.6);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Секція контактів */
+        .contact-section {
+            padding: 20px 20px 50px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+
+        .contact-form {
+            background-color: #1c1c1c;
+            max-width: 340px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #cccccc;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background-color: #2b2b2b;
+            border: 1px solid #555555;
+            border-radius: 4px;
+            color: #ffffff;
+            padding: 8px 10px;
+            margin-bottom: 12px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #ff00cc;
+        }
+
+        .btn-submit {
+            background-color: #ff0099;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #d60080;
+        }
+
+        /* Підвал з дзеркальним градієнтом (синій -> рожевий) */
+        .footer {
+            background: linear-gradient(90deg, #1a33ff 0%, #ff00cc 100%);
+            text-align: center;
+            padding: 16px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="header">
+        <h1>Не вір своїм очам</h1>
+        <p class="subtitle">Галерея неймовірних оптичних ілюзій</p>
+        <nav class="nav">
+            <a href="#about">Про проєкт</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Блок "Про проєкт" -->
+        <section id="about" class="about-section">
+            <h2>Про проєкт</h2>
+            <p>Чи можете ви завжди довіряти своїм очам? Оптичні ілюзії змушують мозок сприймати світ по-іншому.
+                Досліджуйте нашу галерею!</p>
+        </section>
+        <section id="gallery" class="gallery-section">
+            <h2>Галерея ілюзій</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="img/illusion1.jpg" alt="Оптична ілюзія 1"></div>
+                <div class="gallery-item"><img src="img/illusion2.jpg" alt="Оптична ілюзія 2"></div>
+                <div class="gallery-item"><img src="img/illusion3.jpg" alt="Оптична ілюзія 3"></div>
+                <div class="gallery-item"><img src="img/illusion4.jpg" alt="Оптична ілюзія 4"></div>
+                <div class="gallery-item"><img src="img/illusion5.jpg" alt="Оптична ілюзія 5"></div>
+                <div class="gallery-item"><img src="img/illusion6.jpg" alt="Оптична ілюзія 6"></div>
+                <div class="gallery-item"><img src="img/illusion7.jpg" alt="Оптична ілюзія 7"></div>
+                <div class="gallery-item"><img src="img/illusion8.jpg" alt="Оптична ілюзія 8"></div>
+                <div class="gallery-item"><img src="img/illusion9.jpg" alt="Оптична ілюзія 9"></div>
+                <div class="gallery-item"><img src="img/illusion10.jpg" alt="Оптична ілюзія 10"></div>
+                <div class="gallery-item"><img src="img/illusion11.jpg" alt="Оптична ілюзія 11"></div>
+                <div class="gallery-item"><img src="img/illusion12.jpg" alt="Оптична ілюзія 12"></div>
+            </div>
+        </section>
+
+        <!-- Форма зворотного зв'язку -->
+        <section id="contact" class="contact-section">
+            <h2>Зв'яжіться з нами</h2>
+            <form class="contact-form">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="3" required></textarea>
+
+                <button type="submit" class="btn-submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Підвал сайту -->
+    <footer class="footer">
+        <p>© 2025 Не вір своїм очам. Всі права захищені.</p>
+    </footer>
+
+</body>
+
+</html>
